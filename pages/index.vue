@@ -3,8 +3,8 @@
     <div class="section">
       <div class="one">
         <div class="one1">
-          <p>Call to Order</p> 
-          <p>07045606540</p>
+          <p>Reach Us on Whatsapp</p> 
+          <p>+17045606540</p>
         </div>
       </div>
       <div class="two">
@@ -75,27 +75,27 @@
           <div class="five21">
             <img src="/img/cl.svg" alt="">
             <p>Solid Color Men Brown ...</p>
-            <span>&#8358;10,000 to &#8358;25,000  </span>
+            <span>$10,000 to $25,000  </span>
           </div>
           <div class="five21">
             <img src="/img/cl.svg" alt="">
             <p>Solid Color Men Brown ...</p>
-            <span>&#8358;10,000 to &#8358;25,000  </span>
+            <span>$10,000 to $25,000  </span>
           </div>
           <div class="five21">
             <img src="/img/cl.svg" alt="">
             <p>Solid Color Men Brown ...</p>
-            <span>&#8358;10,000 to &#8358;25,000  </span>
+            <span>$10,000 to $25,000  </span>
           </div>
           <div class="five21">
             <img src="/img/cl.svg" alt="">
             <p>Solid Color Men Brown ...</p>
-            <span>&#8358;10,000 to &#8358;25,000  </span>
+            <span>$10,000 to $25,000  </span>
           </div>
           <div class="five21">
             <img src="/img/cl.svg" alt="">
             <p>Solid Color Men Brown ...</p>
-            <span>&#8358;10,000 to &#8358;25,000  </span>
+            <span>$10,000 to $25,000  </span>
           </div>
         </div>
       </div>
@@ -222,16 +222,13 @@
           
         </div>
       </div>
+      
     </div>
-    <footer-component/>
+    <Sooter/>
   </body>
 </template>
 
-<script>
-export default {
-  name: 'IndexPage'
-}
-</script>
+
 
 
 <style scoped>
