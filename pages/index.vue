@@ -28,9 +28,9 @@
       <div class="four">
         <div class="four1">
           <div class="four2">
-            <ul>
-              <li>Supermarket</li>
-              <li>Health & Beauty</li>
+            <ul v-for="(cat,index) in categories" :key="index">
+              <li>{{cat.name}}</li>
+              <!-- <li>Health & Beauty</li>
               <li>Home & Office</li>
               <li>Phones & Tablets</li>
               <li>Electronics & Computers</li>
@@ -38,7 +38,7 @@
               <li>Baby Products</li>
               <li>Gaming</li>
               <li>Automobiles</li>
-              <li>Other Categories</li>
+              <li>Other Categories</li> -->
             </ul>
           </div>
           <div class="four3">
@@ -69,10 +69,16 @@
       </div>
       <div class="five">
         <div class="five1">
-          <p>Top Deals/Let's get Talking</p>
+          <p>{{healthCategory.name}}</p>
         </div>
-        <div class="five2">
-          <div class="five21">
+        <div class="five2" >
+          <div class="five21" v-for="(cat, index) in healthCategory.products" :key="index">
+            <img :src= cat.photo_main alt="">
+            <p>{{cat.name}}</p>
+            <span>{{cat.description}} </span>
+            <span>${{cat.price}}</span>
+          </div>
+          <!-- <div class="five21">
             <img src="/img/cl.svg" alt="">
             <p>Solid Color Men Brown ...</p>
             <span>$10,000 to $25,000  </span>
@@ -91,12 +97,7 @@
             <img src="/img/cl.svg" alt="">
             <p>Solid Color Men Brown ...</p>
             <span>$10,000 to $25,000  </span>
-          </div>
-          <div class="five21">
-            <img src="/img/cl.svg" alt="">
-            <p>Solid Color Men Brown ...</p>
-            <span>$10,000 to $25,000  </span>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="six">
@@ -228,7 +229,48 @@
   </body>
 </template>
 
-
+<script>
+export default {
+  data(){
+    return{
+      categories:{},
+      products:{},
+      healthCategory:{}
+    }
+  },
+  mounted(){
+    this.getCategories(),
+    this.getProducts(),
+    this.getHealthCategory()
+  },
+  methods:{
+    getCategories() {
+      this.$axios.get( "https://direshop777.herokuapp.com/api/categories/")
+        .then((response) => {
+          console.log(response);
+          this.categories = response.data;
+          console.log(this.categories)
+        });
+    },
+    getProducts() {
+      this.$axios.get( "https://direshop777.herokuapp.com/api/products/")
+        .then((response) => {
+          console.log(response);
+          this.products = response.data;
+          console.log(this.products)
+        });
+    },
+    getHealthCategory() {
+      this.$axios.get( "https://direshop777.herokuapp.com/api/categories/8/")
+        .then((response) => {
+          console.log(response);
+          this.healthCategory = response.data;
+          console.log(this.healthCategory)
+        });
+    },
+  }
+}
+</script>
 
 
 <style scoped>
