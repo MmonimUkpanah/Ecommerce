@@ -35,7 +35,15 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
+    
+      
+  
   ],
+  auth: {
+    // Options
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
