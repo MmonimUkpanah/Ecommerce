@@ -225,7 +225,7 @@
       </div>
       
     </div>
-    <Sooter/>
+    
   </body>
 </template>
 
