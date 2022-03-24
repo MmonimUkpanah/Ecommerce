@@ -16,7 +16,7 @@
         </ul>
       </div>
       <div class="three">
-        <ul >
+        <ul>
           <li><img src="/img/tip.svg" alt="logo"></li>
           <li><input type="search" name="" id=""></li>
           <li><button>Search</button></li>
