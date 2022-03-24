@@ -229,6 +229,28 @@
 </template>
 
 
+<script>
+export default {
+  data(){
+    return{
+
+    }
+  },
+  mounted(){
+    this.getCategories()
+  },
+  methods:{
+    getCategories() {
+      this.$axios.get( "https://direshop777.herokuapp.com/api/categories/")
+        .then((response) => {
+          console.log(response);
+        });
+    },
+  }
+}
+</script>
+
+
 
 
 <style scoped>
